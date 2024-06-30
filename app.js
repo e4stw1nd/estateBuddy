@@ -10,7 +10,7 @@ const { estateSchema, reviewSchema } = require('./utils/schemaVerify.js');
 const Review = require('./models/review');
 require('dotenv').config()
 
-
+console.log(`${process.env.SAMPLE}`);
 
 
 const uri = `${process.env.URL}`;
