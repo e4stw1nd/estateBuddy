@@ -8,6 +8,7 @@ const AsyncError = require('./utils/AsyncError');
 const AppError = require('./utils/AppError');
 const { estateSchema, reviewSchema } = require('./utils/schemaVerify.js');
 const Review = require('./models/review');
+require('dotenv').config()
 
 
 
