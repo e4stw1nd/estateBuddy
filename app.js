@@ -9,7 +9,12 @@ const AppError = require('./utils/AppError');
 const { estateSchema, reviewSchema } = require('./utils/schemaVerify.js');
 const Review = require('./models/review');
 
-mongoose.connect('mongodb://127.0.0.1:27017/estate-db', {
+
+
+
+const uri = `${process.env.URL}`;
+
+mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
@@ -84,6 +89,6 @@ app.use((err, req, res, next) => {
 })
 
 
-app.listen(3000, () => {
-    console.log('Serving on port 3000')
+app.listen(process.env.PORT||3000, () => {
+    console.log(`Serving on port ${process.env.PORT}`)
 })

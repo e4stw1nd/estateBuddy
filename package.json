@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/e4stw1nd/estateBuddy#readme",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "ejs-mate": "^4.0.0",
     "express": "^4.19.2",
