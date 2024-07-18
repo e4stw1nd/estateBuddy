@@ -4,6 +4,9 @@ const passport = require('passport');
 const AsyncError = require('../utils/AsyncError');
 const User = require('../models/user');
 
+router.get('/',(req,res)=>{
+    res.redirect('/estates')
+})
 router.get('/register', (req, res) => {
     res.render('users/register');
 });

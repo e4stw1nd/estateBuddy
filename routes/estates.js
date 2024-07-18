@@ -18,6 +18,7 @@ const validateEstate = (req, res, next) => {
 
 router.get('/', AsyncError(async (req, res) => {
     const estates = await Estate.find({});
+    // console.log(estates)
     res.render('estates/index', { estates });
 }));
 router.get('/new', Logged, AsyncError((req, res) => {
