@@ -4,7 +4,7 @@ const router = express.Router({ mergeParams: true });
 const Estate = require('../models/estate');
 const Review = require('../models/review');
 
-const { reviewSchema } = require('../utils/schemas.js');
+const { reviewSchema } = require('../utils/schemaVerify');
 
 
 const AppError = require('../utils/AppError');
