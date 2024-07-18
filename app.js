@@ -15,7 +15,14 @@ const LocalStrategy = require('passport-local');
 const User = require('./models/user');
 
 require('dotenv').config()
+
 console.log(process.env.SAMPLE);
+
+
+
+
+
+
 const uri = `${process.env.URL}`;
 
 mongoose.connect(uri, {
@@ -73,7 +80,7 @@ const reviewRoutes = require('./routes/reviews');
 
 app.use('/',userRoutes);
 app.use('/estates',estateRoutes);
-// app.use('/estates/:id/reviews',reviewRoutes);
+app.use('/estates/:id/reviews',reviewRoutes);
 
 
 app.all('*', (req, res, next) => {
